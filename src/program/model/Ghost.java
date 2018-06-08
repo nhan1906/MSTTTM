@@ -42,10 +42,14 @@ public class Ghost extends GameObject implements MoveRandom{
         this.isPlayer = isPlayer;
         this.isMine = isMine;
         
+        caculateRealPos();
+        
+    }
+    
+    public void caculateRealPos(){
         realFx = fx * Config.wCell;
         realFy = fy * Config.hCell;
     }
-    
     @Override
     public int findDirectionNextMove(int fx, int fy) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -76,6 +80,19 @@ public class Ghost extends GameObject implements MoveRandom{
        }
     }
     
+    
+    public int getFx(){
+        return fx;
+    }
+    
+    public int getFy(){
+        return fy;
+    }
+    
+    public void changePos(int addX, int addY){
+        fx += addX;
+        fy += addY;
+    }
     
     
 }

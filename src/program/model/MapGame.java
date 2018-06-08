@@ -60,4 +60,17 @@ public class MapGame implements GiaoTiepFile{
             System.out.printf("Loi gap phai: %s\n",ex.toString());
         }
     }
+    
+    
+    // Kiểm tra tọa độ này là tường hay đường đi cho hàm di chuyển người chơi
+    // Trả về false là đường đi , true là tường
+    public static boolean isWallOrStreet(int fx, int fy){
+        if( fx < 0 || fx > Config.nCell - 1 || fy < 0 || fy > Config.nCell - 1)
+          return true;
+      else if(map[fx][fy] == 0)
+          return false;      // la duong di
+      else 
+          return true;      //con lai la tuong
+      
+    }
 }
