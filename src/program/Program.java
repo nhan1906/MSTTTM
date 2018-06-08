@@ -12,6 +12,7 @@ import program.utils.ConstrantStrings;
 import sun.audio.AudioPlayer;
 import sun.audio.AudioStream;
 import sun.rmi.runtime.Log;
+import view.GameFrame;
 
 /**
  *
@@ -22,6 +23,7 @@ public class Program {
     
     public static void main(String[] args) {
         runMusicBackground();
+        new GameFrame();
     }
 
     private static void runMusicBackground() {
